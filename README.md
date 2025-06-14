@@ -1,2 +1,2 @@
 # Team-Section
-This project is a dynamic team members section developed using HTML, CSS, and primarily TypeScript and JavaScript.
+This project is a dynamic team members section developed using HTML, CSS, and primarily TypeScript and JavaScript. It showcases individual team profiles with images, names, roles, and brief bios, designed to be easily integrated into company websites or portfolio pages. The layout is fully responsive and optimized for mobile and desktop views. TypeScript is used to ensure scalable and type-safe code, while JavaScript handles interactivity such as hover effects, modals, or filtering by role or department. Ideal for startups, agencies, and personal portfolios looking to highlight team structure with clean, maintainable code.

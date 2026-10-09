@@ -1,0 +1,4 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';import {demoTeam,filterTeam,departmentsFor,safeSocial} from '../lib/team.ts';
+test('filters return the right profiles without mutating source',()=>{assert.equal(filterTeam(demoTeam,'engineering').length,2);assert.equal(filterTeam(demoTeam,'all').length,8);assert.equal(filterTeam(demoTeam,'missing').length,0);});
+test('department controls follow configured data',()=>{assert.deepEqual(departmentsFor([]),['all']);assert.deepEqual(departmentsFor([{department:'research'},{department:'research'}]),['all','research']);});
+test('social links allow only safe HTTPS or validated mail',()=>{assert.equal(safeSocial('javascript:alert(1)'),undefined);assert.equal(safeSocial('https://user:password@example.com'),undefined);assert.equal(safeSocial('https://github.com/example'),'https://github.com/example');assert.equal(safeSocial('alex@example.com',true),'mailto:alex@example.com');});
